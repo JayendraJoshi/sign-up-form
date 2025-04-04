@@ -13,6 +13,7 @@
   <body>
     <div id="picture-container" class="container">
       <img src="images/image.png" alt="" />
+      <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></p>
       <figure>
         <img src="images/odin-lined.png" id="logo" />
         <figcaption>ODIN</figcaption>
@@ -23,51 +24,54 @@
         <span>
           <p>
             This is not a real online service! You know you want to spend your
-            entire life savings on this.<br />
-            Sign up now to get started.
+            entire life savings on this. This will be the best decision you ever made.<br />
+            Sign up <b>now</b> to get started.
           </p>
           <p>You <em>won't</em> regret it. (trust me bro)</p>
         </span>
       </section>
       <section id="form-section">
         <fieldset>
-          <p>Let's do this!</p>
-          <div class="grid-div">
-            <div>
-              <label for="firstName">FIRST NAME</label>
-              <input type="text" name="firstName" id="firstName" />
+          <form>
+            <p>Let's do this!</p>
+            <div class="grid-div">
+              <div>
+                <label for="firstName">FIRST NAME</label>
+                <input type="text" name="firstName" id="firstName" required/>
+              </div>
+              <div>
+                <label for="lastName">LAST NAME</label>
+                <input type="text" name="lastName" id="lastName" required/>
+              </div>
+              <div>
+                <label for="email">EMAIL</label>
+                <input type="email" name="email" id="email" required/>
+              </div>
+              <div>
+                <label for="phoneNumber">PHONE NUMBER</label>
+                <input type="tel" name="phoneNumber" id="phoneNumber" />
+              </div>
+              <div>
+                <label for="password">PASSWORD</label>
+                <input type="password" name="password" id="password" required/>
+              </div>
+              <div>
+                <label for="confirmPassword">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  required
+                />
+              </div>
             </div>
-            <div>
-              <label for="lastName">LAST NAME</label>
-              <input type="text" name="lastName" id="lastName" />
-            </div>
-            <div>
-              <label for="email">EMAIL</label>
-              <input type="text" name="lastName" id="email" />
-            </div>
-            <div>
-              <label for="phoneNumber">PHONE NUMBER</label>
-              <input type="number" name="phoneNumber" id="phoneNumber" />
-            </div>
-            <div>
-              <label for="password">PASSWORD</label>
-              <input type="password" name="password" id="password" />
-            </div>
-            <div>
-              <label for="confirmPassword">CONFIRM PASSWORD</label>
-              <input
-                type="password"
-                name="confirmPassword"
-                id="confirmPassword"
-              />
-            </div>
-          </div>
-        </fieldset>
-      </section>
-      <section id="button-section">
-        <button type="button">Create Account</button>
-        <p>Already have an account?<a href=""> Log in</a></p>
-      </section>
+          </fieldset>
+        </section>
+        <section id="button-section">
+          <button type="submit">Create Account</button>
+          <p>Already have an account?<a href=""> Log in</a></p>
+        </section>  
+    </form>
     </div>
   </body>
 </html>

@@ -17,7 +17,7 @@ html,body{
 }
 body {
     display: grid;
-    grid-template-columns: 40% 60%;  
+    grid-template-columns: 40fr 60fr;  
     grid-template-rows: 100%;
     height: 100dvh;
     height: 100vh;
@@ -41,7 +41,7 @@ body {
     margin-bottom:2rem;
     padding:2rem;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 450;
 }
 #introduction-section span p{
     margin-bottom:1rem;
@@ -54,7 +54,7 @@ body {
 }
 #form-section fieldset p{
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 450;
 }
 #form-section  fieldset{
     height: 100%;
@@ -80,13 +80,14 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     padding:2rem;
-    
 }
 button{
-    padding:0.5rem 3rem;
+    padding:0.8rem 3rem;
     margin-bottom: 1rem;
+    width: 13rem;
     border-radius: 5px;
     background-color: #596D48;
+    color:white;
 }
 a{
     color:#596D48;
@@ -104,6 +105,18 @@ a{
     height: 100%;
     object-fit: cover;
     display: block;
+}
+#picture-container >p{
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom:1%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+#picture-container >p>a{
+    color: white;
+    text-decoration: underline;
 }
 figure{
     position: absolute; 
