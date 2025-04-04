@@ -24,9 +24,10 @@ body {
 }
 /*form styles */
 #form-container{
+    height: 100%;
     grid-column: 2; 
     display: grid;
-    grid-template-rows: 35fr 30fr 35fr;
+    grid-template-rows: 35vh 65vh;
 }
 #introduction-section, #button-section{
     background-color: rgb(240, 243, 245);
@@ -48,31 +49,57 @@ body {
 }
 #form-section{
     padding: 2rem;
+   
 }
 #form-section p{
-    margin-bottom:1rem;
+    margin-bottom: 1.5rem;
 }
-#form-section fieldset p{
+fieldset p{
     font-size: 1.5rem;
     font-weight: 450;
 }
-#form-section  fieldset{
+fieldset{
     height: 100%;
     border-style: none;
+}
+form{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 30vh 35vh;
 }
 .grid-div {
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto auto; 
-    width: fit-content;
-    row-gap: 1rem;
-    column-gap:3rem;
+    grid-template-rows: 1fr 1fr; 
+    width: 60%;
+    height: 80%;
+    padding-bottom:2rem;
     margin-bottom: 1rem;
     justify-items: start;
 }
+.grid-div div{
+    height: fit-content;
+    width: 100%;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
 .grid-div div input{    
     display: block;
-    max-width: 100%; 
+    width: 14rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    border: 1.5px solid rgb(233, 231, 231);
+    
+}
+:focus{
+    outline: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.grid-div div input:invalid {
+    border: 1.5px solid lightcoral; 
+}
+div input:focus{
+    border:1px solid blue;
 }
 #button-section{
     display: flex;
@@ -80,6 +107,11 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     padding:2rem;
+    
+}
+#button-section p{
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 button{
     padding:0.8rem 3rem;
@@ -88,6 +120,7 @@ button{
     border-radius: 5px;
     background-color: #596D48;
     color:white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 a{
     color:#596D48;

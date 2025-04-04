@@ -6,72 +6,93 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-      </style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
   </head>
 
   <body>
     <div id="picture-container" class="container">
       <img src="images/image.png" alt="" />
-      <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></p>
+      <p>
+        Photo by
+        <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on
+        <a
+          href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA" target="_blank"
+          >Unsplash</a
+        >
+      </p>
       <figure>
         <img src="images/odin-lined.png" id="logo" />
         <figcaption>ODIN</figcaption>
       </figure>
     </div>
+
     <div id="form-container" class="container">
       <section id="introduction-section">
         <span>
           <p>
             This is not a real online service! You know you want to spend your
-            entire life savings on this. This will be the best decision you ever made.<br />
+            entire life savings on this. This will be the best decision you ever
+            made.<br />
             Sign up <b>now</b> to get started.
           </p>
           <p>You <em>won't</em> regret it. (trust me bro)</p>
         </span>
       </section>
-      <section id="form-section">
-        <fieldset>
-          <form>
+      <fieldset>
+        <form onsubmit="handleSubmit(event)">
+          <section id="form-section">
             <p>Let's do this!</p>
             <div class="grid-div">
               <div>
                 <label for="firstName">FIRST NAME</label>
-                <input type="text" name="firstName" id="firstName" required/>
+                <input type="text" name="firstName" id="firstName" required />
               </div>
               <div>
                 <label for="lastName">LAST NAME</label>
-                <input type="text" name="lastName" id="lastName" required/>
+                <input type="text" name="lastName" id="lastName" required />
               </div>
               <div>
                 <label for="email">EMAIL</label>
-                <input type="email" name="email" id="email" required/>
+                <input type="email" name="email" id="email" required />
               </div>
               <div>
                 <label for="phoneNumber">PHONE NUMBER</label>
-                <input type="tel" name="phoneNumber" id="phoneNumber" />
+                <input type="tel" name="phoneNumber" id="phoneNumber" pattern="^\+?[0-9]{10,15}$" />
               </div>
               <div>
                 <label for="password">PASSWORD</label>
-                <input type="password" name="password" id="password" required/>
+                <input type="password" name="password" id="password" minlength="6" maxlength="30" required />
               </div>
               <div>
-                <label for="confirmPassword">CONFIRM PASSWORD</label>
+                <label for="confirmPassword" >CONFIRM PASSWORD</label>
                 <input
                   type="password"
                   name="confirmPassword"
                   id="confirmPassword"
+                  minlength="6" maxlength="30"
                   required
                 />
               </div>
             </div>
-          </fieldset>
-        </section>
-        <section id="button-section">
-          <button type="submit">Create Account</button>
-          <p>Already have an account?<a href=""> Log in</a></p>
-        </section>  
-    </form>
+          </section>
+          <section id="button-section">
+            <button type="submit">Create Account</button>
+            <p>Already have an account?<a href=""> Log in</a></p>
+          </section>
+        </form>
+      </fieldset>
     </div>
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault(); 
+
+        const form = event.target;
+        if (form.checkValidity()) {
+          alert("Form submitted successfully!");
+          form.reset();
+        }
+      }
+    </script>
   </body>
 </html>
