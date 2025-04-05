@@ -4,7 +4,7 @@
   font-weight: normal;
 }
 
-/* Resets */
+/* resets */
 * {
   margin: 0;
   padding: 0;
@@ -27,13 +27,13 @@ body {
   display: grid;
   grid-template-columns: 40fr 60fr;
   grid-template-rows: 100%;
-  height: 100dvh;
 }
 /*picture-area & children */
 .picture-area {
   grid-column: 1;
   position: relative;
   height: 100%;
+  font-size: clamp(0.8rem,1vw,1rem);
 }
 .picture-area > img {
   width: 100%;
@@ -88,13 +88,13 @@ section {
   justify-content: flex-end;
 }
 .introduction-section span {
-  margin-bottom: 2rem;
-  padding: 2rem;
-  font-size: 1.5rem;
+  margin-bottom: clamp(0.5rem, 2vh, 1.5rem);
+  padding: clamp(1rem,1.5rem,2rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 400;
 }
 .introduction-section span p {
-  margin-bottom: 1rem;
+  margin-bottom:clamp(1rem, 2vh, 2rem);
 }
 form {
   height: 100%;
@@ -106,25 +106,25 @@ fieldset {
   grid-template-rows: 30vh 35vh;
 }
 fieldset p {
-  font-size: 1.5rem;
-  font-weight: 450;
+  font-size: clamp(1rem,2vw,1.5rem);
+  font-weight: 400;
 }
 .input-section {
-  padding: 2rem;
+  padding: clamp(1rem,1.5rem,2rem);
   background-color: white;
   position: relative; 
   z-index: 2;         
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 .input-section p {
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1rem,1vh,1.5rem);
 }
 .grid-div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   column-gap: 10%;
-  width: 50%;
+  width: fit-content;
   height: 80%;
   padding-bottom: 2rem;
   margin-bottom: 1rem;
@@ -138,7 +138,7 @@ fieldset p {
 }
 .grid-div div input {
   display: block;
-  width: 14rem;
+  width: clamp(8rem,10vw,14rem);
   height: 1.5rem;
   border-radius: 3px;
   border: 1.5px solid #e9e7e7;
@@ -160,7 +160,7 @@ div input:focus {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 2rem;
+  padding: clamp(1rem,1.5rem,2rem);
 }
 button {
   padding: 0.8rem 3rem;
